@@ -287,4 +287,4 @@ class ItensDaAlocacaoDAO:
             "SELECT id_locacao, id_material, valor, data_devolucao, valor_pago FROM ItensDaAlocacao WHERE id_locacao = ?",
             (id_locacao,),
         )
-        return self.db.fetchall()
+        return self.db.cursor.fetchall()
